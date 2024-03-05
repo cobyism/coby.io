@@ -1,0 +1,39 @@
+title: "Coby’s Playground"
+description: "@cobyism’s code playground."
+
+author:
+  name: Coby Chapple
+  handle: cobyism
+
+source: src
+permalink: /blog/:title/
+baseurl: /
+url: https://coby.io
+
+collections:
+  projects:
+    output: true
+    permalink: /labs/:path
+
+highlighter: rouge
+markdown: kramdown
+redcarpet:
+  extensions: [with_toc_data, footnotes]
+
+exclude: [vendor]
+
+gems:
+- jekyll-mentions
+- jekyll-redirect-from
+- jekyll-sitemap
+- jemoji
+
+plugins:
+  - jekyll-postcss
+
+postcss:
+  cache: false
+
+google_analytics_id: UA-XXXXXXXX-X
+host: 0.0.0.0
+port: 3000

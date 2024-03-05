@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% if page.title == "Labs" %}
+    {% capture labs_class %}selected{% endcapture %}
+  {% elsif page.layout == "project" %}
+    {% capture labs_class %}selected{% endcapture %}
+  {% else %}
+    {% capture home_class %}selected{% endcapture %}
+  {% endif %}
+  <header>
+    <a href="{{ '/' | relative_url }}" class="site-title">
+      <h1><span>//</span>coby.io</h1>
+    </a>
+    <nav>
+      <ul>
+        <li class="{{ home_class }}"><a href="{{ '/' | relative_url }}">About</a></li>
+        <li class="{{ labs_class }}"><a href="{{ '/labs' | relative_url }}">Labs</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <p>//</p>
+    <p>
+      Hand-coded from 100% recycled pixels.<br />
+      Copyright © {{ site.time | date: '%Y' }} Coby&nbsp;Chapple.<br />
+      All&nbsp;rights&nbsp;reserved.<br />
+    </p>
+  </footer>
+</body>
+</html>

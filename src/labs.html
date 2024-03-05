@@ -1,0 +1,10 @@
+---
+layout: main
+title: Labs
+---
+
+{% for project in site.projects %}
+<div class="project">
+  <p>&rarr; <a href="{{ project.url }}">{{ project.title }}</a></p>
+</div>
+{% endfor %}

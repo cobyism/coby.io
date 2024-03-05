@@ -1,0 +1,19 @@
+{
+    "name": "@cobyism",
+    "short_name": "@cobyism",
+    "icons": [
+        {
+            "src": "/public/android-chrome-192x192.png?v=20230723a",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/public/android-chrome-256x256.png?v=20230723a",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}

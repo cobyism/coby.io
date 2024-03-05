@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+{% if page.title %}
+  {% capture head_title %}{{ page.title }} • {{ site.description }}{% endcapture %}
+{% else %}
+  {% capture head_title %}{{ site.title }} • {{ site.description }}{% endcapture %}
+{% endif %}
+
+<title>{{ head_title }}</title>
+
+{% if page.description %}
+  {% capture meta_description %}{{ page.description }}{% endcapture %}
+{% else %}
+  {% capture meta_description %}{{ content }}{% endcapture %}
+{% endif %}
+<meta name="description" content="{{ meta_description | strip_html | truncatewords: 200 | strip_newlines | escape_once }}">
+
+<meta property="og:title" content="{{ site_title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta property="og:image" content="{{ "/assets/images/cobyism-stache-wiggle.gif" | relative_url }}" />
+
+<link rel="stylesheet" href='{{ "/assets/css/styles.css" | relative_url }}'>
+
+<!-- Thanks, https://realfavicongenerator.net/! -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "/public/apple-touch-icon.png?v=20230723a" | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "/public/favicon-32x32.png?v=20230723a" | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "/public/favicon-16x16.png?v=20230723a" | relative_url }}">
+<link rel="icon" type="image/x-icon" sizes="16x16" href="{{ "/public/favicon.ico?v=20230723a" | relative_url }}">
+<link rel="manifest" href="{{ "/public/site.webmanifest?v=20230723a" | relative_url }}">
+<link rel="mask-icon" href="{{ "/public/safari-pinned-tab.svg?v=20230723a" | relative_url }}" color="#db2777">
+<link rel="shortcut icon" href="{{ "/public/favicon.ico?v=20230723a" | relative_url }}">
+
+<meta name="apple-mobile-web-app-title" content="@cobyism">
+<meta name="application-name" content="@cobyism">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="{{ "/public/browserconfig.xml?v=20230723a" | relative_url }}">
+<meta name="theme-color" content="#ffffff">
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="https://unpkg.com/blobs/v2"></script>
+<script src="https://unpkg.com/blobs/v2/animate"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.1/dist/simple-lightbox.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.1/dist/simple-lightbox.min.css" rel="stylesheet">
+<script>
+  {% include head.js %}
+</script>
