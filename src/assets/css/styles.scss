@@ -9,3 +9,43 @@
 /* Global styles */
 
 html { height: 100%; }
+
+.site-title {
+  @apply font-black;
+}
+
+.site-title span {
+  @apply text-fuchsia-600;
+}
+
+nav {
+  @apply mt-4;
+}
+
+nav ul {
+  @apply flex justify-start items-start font-black;
+}
+
+nav ul li {
+  @apply mr-3;
+}
+
+nav .selected a {
+  @apply border-b-2 border-fuchsia-600;
+}
+
+main {
+  @apply mt-4;
+}
+
+main a {
+  @apply text-fuchsia-600;
+}
+
+footer {
+  @apply mt-4 text-xs text-slate-600;
+}
+
+.project {
+  @apply mt-4 mb-4;
+}
