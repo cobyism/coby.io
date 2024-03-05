@@ -38,7 +38,7 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - uses: actions/setup-node@v3
         with:
-          node-version: 23.6.2
+          node-version: 20.3.1
           cache: 'npm'
           cache-dependency-path: 'package-lock.json'
       - run: npm install
